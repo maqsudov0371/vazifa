@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My first web page</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        
+/* Cascading style sheets */
+body{
+    background:yellow;
+}
+
+table{
+    width:50%;
+    margin: 20px auto;
+
+}
+td{
+    width: 20%;
+    margin: 30px auto;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 5px;
+    /* border-radius: 15px; */
+    box-shadow: 0 0 10px silver;
+}
+
+
+form{
+    width: 30%;
+    margin: 30px auto;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px silver;
+}
+
+input{
+    height: 25px;
+    margin: 15px;
+}
+    </style>
+ 
+
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <div class="register">
+        <a href="{% url 'register_user' %}">Sing up</a>
+    </div>
+<!--<h2>  Hello world !  </h2>-->
+<!--<h6>  Hello world !  </h6>-->
+<!--<br>-->
+<!--<input type="text">-->
+<!--<img src="https://miro.medium.com/v2/resize:fit:1200/1*aYjzU0FuWPY9A87IKVN1Kg.jpeg" alt="No image">-->
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Ism</td>
+            <td>Familya</td>
+            <td>Yoshi</td>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Olim</td>
+        <td>Olimov</td>
+        <td>19</td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<form action="">
+    <div >
+        <label for="username" class="form-label"><sup class="text-danger"></sup></label>
+
+        <input type="text" name="username" id="username" class="form-control" placeholder="Username" required="">
+    </div>
+    <br>
+    <div >
+        <label for="password" class="form-label"><sup class="text-danger"></sup></label>
+
+        <input type="text" name="password" id="password" class="form-control" placeholder="Password" required="">
+    </div>
+    <br>
+    <button>Send</button>
+</form>
+
+
+
+</body>
+</html>

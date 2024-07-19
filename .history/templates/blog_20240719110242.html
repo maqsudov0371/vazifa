@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MY LISTS</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        
+/* Cascading style sheets */
+body{
+    background: rgb(34, 0, 255);
+}
+
+div{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+a{
+    font-size: 30px;
+    color: white;
+}
+
+table{
+    width:50%;
+    margin: 20px auto;
+
+}
+td{
+    width: 20%;
+    margin: 30px auto;
+    background-color: aqua;
+    text-align: center;
+    padding: 7px;
+    box-shadow: 0px 0px 10px silver, 0px 0px 10px white, 0px 0px 1px black;
+}
+
+
+table{
+    width: 70%;  
+    margin: 30px auto;
+    background-color: aqua;
+    text-align: center;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px silver, 0 0 15px white;
+}
+
+input{
+    height: 25px;
+    margin: 15px;
+}
+
+    </style>
+ 
+
+</head>
+<body>
+    <div class="register">
+        <h1>{{ list }}</h1>
+        <ul class="navbar-nav mx-auto">
+            <li class="navbar-nav mx-auto">
+                <a href="http://127.0.0.1:8000/register/">Kompaniyalar ro'yxati</a>
+            </li>
+            <br>
+            <li class="nav-item">
+                <a href="http://127.0.0.1:8000/login">Dasturlash turlari</a>
+            </li>
+        </ul>
+    </div>
+
+<table >
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Nomi</td>
+            <td>Rangi</td>
+            <td>Yili</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for car in cars %}
+    <tr>
+        <td>{{ car.id }}</td>
+        <td>{{ car.name }}</td>
+        <td>{{ car.color }}</td>
+        <td>{{ car.year }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+
+
+
+
+</body>
+</html>
